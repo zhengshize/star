@@ -1,50 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>简易-星星评分-功能-jQuery纯手写</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>简易-星星评分-功能-jQuery纯手写</title>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <style type="text/css">
-        .score_star {text-align: center;}
-        .score_star i {color: #999;font-size: 28px;font-style: normal;cursor: pointer;}
-        .score_star i.on {color: #c8a377;}
+      .score_star {
+        text-align: center;
+      }
+      .score_star i {
+        color: #999;
+        font-size: 28px;
+        font-style: normal;
+        cursor: pointer;
+      }
+      .score_star i.on {
+        color: #c8a377;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="score_star">
-        <i>★</i>
-        <i>★</i>
-        <i>★</i>
-        <i>★</i>
-        <i>★</i>
+      <i>★</i>
+      <i>★</i>
+      <i>★</i>
+      <i>★</i>
+      <i>★</i>
     </div>
     <script type="text/javascript">
-        $(function(){
-            // 星星选择评价事件
-            $(".score_star >i").click(function(event) {
-                var ind = $(this).index();
-                var ii = $(this).parent().find("i");
-                switch(ind){
-                    case 0:
-                        ii.removeClass("on").slice(0,1).addClass("on");
-                    break;
-                    case 1:
-                        ii.removeClass("on").slice(0,2).addClass("on");
-                    break;
-                    case 2:
-                        ii.removeClass("on").slice(0,3).addClass("on");
-                    break;
-                    case 3:
-                        ii.removeClass("on").slice(0,4).addClass("on");
-                    break;
-                    case 4:
-                        ii.removeClass("on").slice(0,5).addClass("on");
-                    break;
-                    default:
-                    break;
-                }
-            });
+      $(function() {
+        // 星星选择评价事件
+        $(".score_star >i").click(function(event) {
+          var ind = $(this).index();
+          var ii = $(this)
+            .parent()
+            .find("i");
+          switch (ind) {
+            case 0:
+              ii.removeClass("on")
+                .slice(0, 1)
+                .addClass("on");
+              break;
+            case 1:
+              ii.removeClass("on")
+                .slice(0, 2)
+                .addClass("on");
+              break;
+            case 2:
+              ii.removeClass("on")
+                .slice(0, 3)
+                .addClass("on");
+              break;
+            case 3:
+              ii.removeClass("on")
+                .slice(0, 4)
+                .addClass("on");
+              break;
+            case 4:
+              ii.removeClass("on")
+                .slice(0, 5)
+                .addClass("on");
+              break;
+            default:
+              break;
+          }
         });
+      });
     </script>
-</body>
+  </body>
 </html>
